@@ -1,19 +1,20 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { connect } from "react-redux";
 import { getData, postData } from "../actions";
 import PostPage from "./PostPage";
 import SmurfCards from "./SmurfCards";
 
 const HomePage = (props) => {
-    console.log(props.data)
 
     return (
-        <div>
+        <>
+        <div className="cards">
             {props.data.map(element => {
                 return <SmurfCards key={element.id} name={element.name} age={element.age} height={element.height} />
             })}
-            <PostPage />
         </div>
+        <PostPage />
+        </>
     )
 }
 

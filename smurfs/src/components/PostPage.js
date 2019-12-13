@@ -7,8 +7,8 @@ const PostPage = (props) => {
 
     const [newSmurf, setSmurf] = useState({
         name: '',
-        age: 0,
-        height: 0
+        age: '',
+        height: ''
     });
 
     const handleChanges = (e) => {
@@ -30,9 +30,9 @@ const PostPage = (props) => {
             <label htmlFor='name'>Name</label>
             <input type="text" name="name" onChange={handleChanges} value={newSmurf.name}/>
             <label htmlFor='age'>Age</label>
-            <input type="number" name='age' onChange={handleChanges} value={newSmurf.age}></input>
+            <input type="text" name='age' onChange={handleChanges} value={newSmurf.age}></input>
             <label htmlFor='height'>Height</label>
-            <input type="number" name='height' onChange={handleChanges} value={newSmurf.height}></input>
+            <input type="text" name='height' onChange={handleChanges} value={newSmurf.height}></input>
             <button>Add Smurf</button>
         </form>
     )
